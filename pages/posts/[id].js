@@ -1,8 +1,12 @@
+import Head from 'next/head';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 const Post = ({ postData }) => (
   <Layout>
+    <Head>
+      <title>{postData.title}</title>
+    </Head>
     {postData.title}
     <br />
     {postData.id}
