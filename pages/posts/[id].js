@@ -1,8 +1,14 @@
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
-const Post = () => (
-  <Layout></Layout>
+const Post = ({ postData }) => (
+  <Layout>
+    {postData.title}
+    <br />
+    {postData.id}
+    <br />
+    {postData.date}
+  </Layout>
 );
 
 export default Post;
